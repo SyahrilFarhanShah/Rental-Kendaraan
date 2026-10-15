@@ -6,32 +6,37 @@ import model.Mobil;
 import model.Motor;
 //import model.Kendaraan;
 import model.Minibus;
+import model.MobilPremium;
 
 public class Main {
     public static void main(String[] args) {
         RentarController controller = new RentarController();
 
-        //tambah data awall// data dummy
+        // tambah data awall// data dummy
         controller.tambahDataAwal(new Mobil(
-            "B 1234 ABC", 
-            "Toyota Avanza",  
-            300000));   
+                "B 1234 ABC",
+                "Toyota Avanza",
+                300000));
 
         controller.tambahDataAwal(new Motor(
-            "B 5678 DEF", 
-            "Honda Vario",  
-            100000));
+                "B 5678 DEF",
+                "Honda Vario",
+                100000));
 
         controller.tambahDataAwal(new Mobil(
-            "B 9012 GHI", 
-            "Suzuki Swift", 
-            250000));
+                "B 9012 GHI",
+                "Suzuki Swift",
+                250000));
 
         controller.tambahDataAwal(new Minibus(
-                        "L 7777 GH", 
-                        "Toyota Hiace", 
-                        900000)
-                );
+                "L 7777 GH",
+                "Toyota Hiace",
+                900000));
+
+        controller.tambahDataAwal(new MobilPremium(
+                "L 9999 VIP",
+                "Toyota Alphard",
+                1500000));
 
         controller.jalankan();
     }
